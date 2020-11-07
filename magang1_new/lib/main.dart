@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:magang1_new/models/user.dart';
+import 'package:magang1_new/screens/transitions/splashscreen.dart';
 import 'package:magang1_new/screens/wrapper.dart';
 import 'package:magang1_new/services/auth.dart';
 import 'package:provider/provider.dart';
@@ -16,7 +17,13 @@ class MyApp extends StatelessWidget {
       value: AuthService().user,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: Wrapper(),
+        title: 'User BanguninApp',
+        initialRoute: '/splashscreen',
+        routes: {
+          '/splashscreen': (context) => SplashScreen(),
+          '/wrapper': (context) => Wrapper(),
+        },
+        //home: Wrapper(),
       ),
     );
   }
