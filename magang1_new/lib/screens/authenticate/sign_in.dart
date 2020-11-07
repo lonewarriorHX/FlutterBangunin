@@ -35,7 +35,7 @@ class _SignInState extends State<SignIn> {
                       children: <Widget>[
                         SizedBox(height: 20.0),
                         Container(
-                          child: Image.asset('assets/img/logo.png',
+                          child: Image.asset('assets/img/logo.jpg',
                               height: 113, fit: BoxFit.cover),
                         ),
                         SizedBox(height: 30.0),
