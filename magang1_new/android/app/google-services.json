@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "382896267034",
+    "firebase_url": "https://magang1-new.firebaseio.com",
+    "project_id": "magang1-new",
+    "storage_bucket": "magang1-new.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:382896267034:android:695939905c471ff6b656a3",
+        "android_client_info": {
+          "package_name": "com.example.magang1_new"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "382896267034-pjopirlm94nuev351o4p54irrjtmj28g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtL_RKGGf17mnGzwvveHWKpVlxGcEmli4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "382896267034-pjopirlm94nuev351o4p54irrjtmj28g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
