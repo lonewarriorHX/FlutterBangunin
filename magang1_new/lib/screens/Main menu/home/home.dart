@@ -46,23 +46,23 @@ class Home extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      buildActivityButton(Icons.card_membership, "My Card",
-                          Colors.blue.withOpacity(0.2), Color(0XFF01579B)),
                       buildActivityButton(
-                          Icons.transfer_within_a_station,
-                          "Transfer",
-                          Colors.cyanAccent.withOpacity(0.2),
-                          Color(0XFF0097A7)),
+                          Icons.umbrella,
+                          "Bangun",
+                          Colors.orangeAccent.withOpacity(0.2),
+                          Colors.deepOrange),
                       buildActivityButton(
                           Icons.pie_chart,
                           "Statistics",
                           Color(0XFFD7CCC8).withOpacity(0.4),
                           Color(0XFF9499B7)),
                       buildActivityButton(
-                          Icons.umbrella,
-                          "desain & bangun",
-                          Colors.orangeAccent.withOpacity(0.2),
-                          Colors.deepOrange)
+                          Icons.transfer_within_a_station,
+                          "Transfer",
+                          Colors.cyanAccent.withOpacity(0.2),
+                          Color(0XFF0097A7)),
+                      buildActivityButton(Icons.card_membership, "My Card",
+                          Colors.blue.withOpacity(0.2), Color(0XFF01579B)),
                     ],
                   ),
                   SizedBox(
@@ -86,6 +86,39 @@ class Home extends StatelessWidget {
             ),
           )
         ],
+      ),
+    );
+  }
+
+  GestureDetector buildActivityButton(
+      IconData icon, String title, Color backgroundColor, Color iconColor) {
+    return GestureDetector(
+      onTap: (null),
+      child: Container(
+        margin: EdgeInsets.all(10),
+        height: 65,
+        width: 65,
+        decoration: BoxDecoration(
+            color: backgroundColor, borderRadius: BorderRadius.circular(10.0)),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              icon,
+              color: iconColor,
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Text(
+              title,
+              style: TextStyle(
+                color: Colors.black54,
+                fontWeight: FontWeight.bold,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
@@ -166,39 +199,6 @@ class Home extends StatelessWidget {
             ],
           )
         ],
-      ),
-    );
-  }
-
-  GestureDetector buildActivityButton(
-      IconData icon, String title, Color backgroundColor, Color iconColor) {
-    return GestureDetector(
-      onTap: (null),
-      child: Container(
-        margin: EdgeInsets.all(10),
-        height: 65,
-        width: 65,
-        decoration: BoxDecoration(
-            color: backgroundColor, borderRadius: BorderRadius.circular(10.0)),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              icon,
-              color: iconColor,
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Text(
-              title,
-              style: TextStyle(
-                color: Colors.black54,
-                fontWeight: FontWeight.bold,
-              ),
-            )
-          ],
-        ),
       ),
     );
   }
