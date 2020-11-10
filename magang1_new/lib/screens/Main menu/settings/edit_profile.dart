@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:magang1_new/screens/settings/settings.dart';
+import 'package:magang1_new/screens/Main menu/settings/settings.dart';
 
 class SettingsUI extends StatelessWidget {
   @override
