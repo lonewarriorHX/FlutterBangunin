@@ -2,7 +2,6 @@ import 'package:magang1_new/shared/loading.dart';
 import 'package:magang1_new/screens/authenticate/authenticate.dart';
 import 'package:magang1_new/services/database.dart';
 import 'package:magang1_new/shared/decorations.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:magang1_new/screens/Main menu/Order/Order.dart';
 import 'package:magang1_new/screens/Main menu/portofolio/portofolio.dart';
