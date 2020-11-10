@@ -20,43 +20,79 @@ class _MainMenuTabNavState extends State<MainMenuTabNav> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 4,
-      child: Scaffold(
-        backgroundColor: AppColors().primary,
-        body: PageStorage(
-          bucket: bucket,
-          child: TabBarView(
+      child: Container(
+        decoration: BoxDecoration(
+          color: AppColors().primary,
+        ),
+        child: Scaffold(
+          body: Stack(
+            alignment: Alignment.center,
+            fit: StackFit.expand,
+            clipBehavior: Clip.none,
             children: <Widget>[
-              Home(
-                  //key: PageStorageKey('Beranda'),
-                  ),
-              Order(
-                  //key: PageStorageKey('Akun'),
-                  ),
-              SettingsUI(
-                  //key: PageStorageKey('Pengaturan'),
-                  ),
-              Portofolio(
-                  //key: PageStorageKey('Portofolio'),
-                  ),
+              coverPicture(),
+              coverPictureGradient(),
+              navigation(),
             ],
           ),
         ),
-        bottomNavigationBar: Container(
-          color: AppColors().accent1,
-          child: TabBar(
-            tabs: <Widget>[
-              Tab(icon: Icon(Icons.home)),
-              Tab(icon: Icon(Icons.person)),
-              Tab(icon: Icon(Icons.settings)),
-              Tab(icon: Icon(Icons.clean_hands)),
-            ],
-            labelColor: AppColors().primary,
-            indicator: UnderlineTabIndicator(
-              borderSide: BorderSide(color: AppColors().primary, width: 4.0),
-              insets: EdgeInsets.only(bottom: 44),
-            ),
-            unselectedLabelColor: AppColors().accent3,
+      ),
+    );
+  }
+
+  Scaffold navigation() {
+    return Scaffold(
+      backgroundColor: Colors.transparent,
+      body: PageStorage(
+        bucket: bucket,
+        child: TabBarView(
+          children: <Widget>[
+            Home(/*key: PageStorageKey('Beranda'),*/),
+            Order(/*key: PageStorageKey('Beli'),*/),
+            SettingsUI(/*key: PageStorageKey('Akun')*/),
+            Portofolio(/*key: PageStorageKey('Pengaturan'),*/),
+          ],
+        ),
+      ),
+      bottomNavigationBar: Container(
+        color: AppColors().accent1,
+        child: TabBar(
+          tabs: <Widget>[
+            Tab(icon: Icon(Icons.home)),
+            Tab(icon: Icon(Icons.shopping_cart)),
+            Tab(icon: Icon(Icons.person)),
+            Tab(icon: Icon(Icons.settings)),
+          ],
+          labelColor: AppColors().primary,
+          indicator: UnderlineTabIndicator(
+            borderSide: BorderSide(color: AppColors().primary, width: 4.0),
+            insets: EdgeInsets.only(bottom: 44),
           ),
+          unselectedLabelColor: AppColors().accent3,
+        ),
+      ),
+    );
+  }
+
+  Image coverPicture() {
+    return Image.asset(
+      'assets/img/home_bg_default3.jpg',
+      fit: BoxFit.cover,
+    );
+  }
+
+  Container coverPictureGradient() {
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: FractionalOffset.topCenter,
+          end: FractionalOffset.bottomCenter,
+          colors: [
+            AppColors().primary,
+            AppColors().accent1.withOpacity(0.0),
+          ],
+          stops: [0.0, 0.7],
         ),
       ),
     );
