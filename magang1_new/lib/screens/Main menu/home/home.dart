@@ -46,6 +46,11 @@ class Home extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
+                      buildActivityButton(
+                          Icons.umbrella,
+                          "Bangun",
+                          Colors.orangeAccent.withOpacity(0.2),
+                          Colors.deepOrange),
                       buildActivityButton(Icons.card_membership, "My Card",
                           Colors.blue.withOpacity(0.2), Color(0XFF01579B)),
                       buildActivityButton(
@@ -58,11 +63,6 @@ class Home extends StatelessWidget {
                           "Statistics",
                           Color(0XFFD7CCC8).withOpacity(0.4),
                           Color(0XFF9499B7)),
-                      buildActivityButton(
-                          Icons.umbrella,
-                          "Bangun",
-                          Colors.orangeAccent.withOpacity(0.2),
-                          Colors.deepOrange)
                     ],
                   ),
                   SizedBox(
