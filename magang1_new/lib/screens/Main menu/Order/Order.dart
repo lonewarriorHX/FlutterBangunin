@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:magang1_new/services/auth.dart';
 
-class Home extends StatelessWidget {
+class Order extends StatefulWidget {
+  //Order({Key key}) : super(key: key);
+
+  @override
+  _OrderState createState() => _OrderState();
+}
+
+class _OrderState extends State<Order> {
   final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
