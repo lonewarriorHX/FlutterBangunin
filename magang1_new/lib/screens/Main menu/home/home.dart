@@ -60,7 +60,7 @@ class Home extends StatelessWidget {
                           Color(0XFF9499B7)),
                       buildActivityButton(
                           Icons.umbrella,
-                          "desain & bangun",
+                          "Bangun",
                           Colors.orangeAccent.withOpacity(0.2),
                           Colors.deepOrange)
                     ],
