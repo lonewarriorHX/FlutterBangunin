@@ -15,7 +15,7 @@ class DetailsScreen extends StatelessWidget {
             decoration: BoxDecoration(
               color: kBlueLightColor,
               image: DecorationImage(
-                image: AssetImage("assets/images/undraw_pilates_gpdb2.png"),
+                image: AssetImage("assets/img/undraw_pilates_gpdb2.png"),
                 fit: BoxFit.fitWidth,
               ),
             ),
