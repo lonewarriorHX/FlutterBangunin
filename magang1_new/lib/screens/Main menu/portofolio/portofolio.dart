@@ -97,7 +97,7 @@ class _PortofolioState extends State<Portofolio> {
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       color: Colors.white,
                       child: ListView(
-                        padding: EdgeInsets.only(top: 75),
+                        padding: EdgeInsets.only(top: 50),
                         children: [
                           Text(
                             "Servis Pembangunan Rumah",
