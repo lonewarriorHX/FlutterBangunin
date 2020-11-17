@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:magang1_new/services/auth.dart';
+//import 'package:magang1_new/shared/slide_up_panel.dart';
 
 class Home extends StatelessWidget {
   final AuthService _auth = AuthService();
